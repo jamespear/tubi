@@ -1,0 +1,11 @@
+# local secrets / env
+.env
+.wrangler
+# build / deps
+dist/
+node_modules/
+# editor / OS
+.vscode/
+.DS_Store
+npm-debug.log
+yarn-error.log

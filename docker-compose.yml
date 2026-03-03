@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  app:
+    build: .
+    ports:
+      - "8787:8787"
+    environment:
+      # Provide these via .env or override on the CLI for security
+      - CLOUDFLARE_API_TOKEN=${CLOUDFLARE_API_TOKEN}
+      - CF_ACCOUNT_ID=${CF_ACCOUNT_ID}
+    volumes:
+      - ./:/app
+    # Useful for local development so code changes appear inside the container
+    command: sh -c "yarn install && yarn wrangler dev --host 0.0.0.0"

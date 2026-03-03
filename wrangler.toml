@@ -1,0 +1,21 @@
+name = "cloudflare-video-cdn"
+workers_dev = true
+compatibility_date = "2023-10-01"
+main = "src/worker.ts"
+
+# Do NOT store your account_id or tokens here.
+# Wrangler will read CF_ACCOUNT_ID and CLOUDFLARE_API_TOKEN from the environment.
+# Example:
+# export CF_ACCOUNT_ID=your_account_id
+# export CLOUDFLARE_API_TOKEN=your_token
+
+[build]
+command = "npm run build"
+
+[triggers]
+crons = ["0 * * * *"]
+
+[env.production]
+workers_dev = false
+# route = "your_domain.com/*"
+# zone_id = "your_zone_id"

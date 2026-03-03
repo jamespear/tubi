@@ -1,0 +1,19 @@
+FROM node:18-alpine
+
+RUN apk add --no-cache bash
+
+WORKDIR /app
+
+# copy package manifests first for caching
+COPY package.json package-lock.json* yarn.lock* ./
+
+# install production deps only
+RUN npm ci --only=production
+
+# copy app sources
+COPY server ./server
+COPY public ./public
+
+EXPOSE 8080
+
+CMD ["node", "server/index.js"]
