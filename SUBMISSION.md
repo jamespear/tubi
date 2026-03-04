@@ -1,10 +1,10 @@
 James Pearce — Tubi Builders Program — Take-Home Submission
 
 Video intro:
-- [Link to 2-min intro video]()
+- [Link to 2-min intro video](https://youtu.be/qffZpgx6gSc)
 
 Product walkthrough:
-- [Link to 3-5 minute walkthrough]()
+- [Link to 3-5 minute walkthrough](https://youtu.be/eHQk6400Hgk)
 
 Repository:
 - Public GitHub repo: https://github.com/jamespear/tubi
